@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
+@import "swiper/css";
+
+@font-face {
+  font-family: "ABCMonumentGrotesk-Bold";
+  src: url("/fonts/ABCMonumentGroteskTrial-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABCMonumentGrotesk-Regular";
+  src: url("/fonts/ABCMonumentGroteskTrial-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-monument-bold: "ABCMonumentGrotesk-Bold", sans-serif;
+  --font-monument-regular: "ABCMonumentGrotesk-Regular", sans-serif;
+
+  --breakpoint-sm: 640px;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.pointer-events-none canvas {
+  pointer-events: none !important;
+}
+
+.maplibregl-canvas {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
